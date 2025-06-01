@@ -8,8 +8,8 @@ export default function Hero() {
         <h1 className= "section-title">Merhaba, ben Mert Özkaya</h1>   
         <p>
             Bilkent Üniversitesi Bilgisayar Mühendisliği dördüncü sınıf öğrencisiyim. 
-            Yazılım geliştirme, özellikle Unity ile oyun tasarımı ve yapay zekâ uygulamaları üzerine yoğunlaşıyorum
-            ve güncel olarak Unity ve yapay zeka alanında projeler geliştiriyorum.
+            Yazılım geliştirme, özellikle Unity ile oyun tasarımı ve yapay zekâ uygulamaları üzerine yoğunlaşıyorum ve
+            bu alanlarda kendimi geliştirmeye çalışıyorum.
         </p>
       </div>
     </section>
