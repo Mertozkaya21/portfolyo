@@ -1,38 +1,494 @@
-.App {
+
+/*
+:root {
+  --primary-color: #275968;
+  --secondary-color:  #102d31; 
+  --accent-color: #0ba1e2;
+  --light-bg: #f0f4f8;
+  --dark-text: #2c3e50;
+  --nav-height: 50px;
+}
+*/
+:root {
+  --light-bg: #FBFAF7;
+  --dark-text: #2E3A3A;
+  --primary-color: #007A5A;
+  --secondary-color: #D9822B;
+  --accent-color: #CBBF7A;
+  --nav-height: 50px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--light-bg);
+  color: var(--dark-text);
+  overflow-x: hidden;
+  position: relative;
+  margin:0;
+  padding:0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem 0;
+  position: relative;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #007A5A;    /* Burayı dilediğin yeşil tonla değiştir */
+  font-weight: 700;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+section {
+  padding: 1rem 0; /* 2rem yerine 1rem yaptık */
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+section:last-of-type {
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h1, h2, h3 {
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  position: relative;
+}
+a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: var(--secondary-color);
+  left: 0;
+  bottom: -2px;
+  transition: width 0.3s;
+}
+a:hover::after {
+  width: 100%;
+}
+
+/* 1. Hareketli Arka Plan */
+@keyframes gradientBG {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.animated-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, var(--primary-color), var(--accent-color), #ffffff, var(--accent-color));
+  background-size: 400% 400%;
+  animation: gradientBG 25s ease infinite;
+  z-index: -1;
+}
+
+/* Navbar Genel Stil */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--nav-height);
+  background-color: #ffffffcc;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  z-index: 100;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar .container {
+  width: 90%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.navbar .logo {
+  font-size: 1.8rem;
+  color: var(--secondary-color);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  font-weight: 500;
+  color: var(--dark-text);
+  transition: color 0.2s, transform 0.2s;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+/* Sosyal İkonlar */
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.social-icons a {
+  color: var(--dark-text);
+  transition: color 0.2s;
+}
+
+.social-icons a:hover {
+  color: var(--accent-color);
+}
+
+/* Responsive (Mobilde İkonlar Arasını Azalt) */
+@media (max-width: 768px) {
+  .social-icons {
+    gap: 0.5rem;
   }
+}
+
+
+
+/* 3. Hero Bölümü */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(80vh - var(--nav-height));
+  text-align: center;
+  padding-top: var(--nav-height);
+}
+
+.hero .hero-bg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150%;
+  height: 100%;
+  background: url('https://via.placeholder.com/1200x800?text=Background') no-repeat center/cover;
+  opacity: 0.1;
+  z-index: -1;
+}
+.hero h1 {
+  font-size: 3rem;
+  color: var(--primary-color);
+  animation: fadeInUp 1s ease;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  animation: fadeInUp 1.2s ease;
+}
+
+a:hover {
+  color: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+.cta-button {
+  align-items: center;
+  margin-top: 1.5rem;
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  transition: background-color 0.2s, transform 0.2s;
+  animation: fadeInUp 1.4s ease;
+}
+.cta-button:hover {
+  align-items: center;
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+/* 5. Projects Bölümü */
+#projects .container {
+  padding-top: var(--nav-height);
+}
+#projects .container > h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
+  font-weight: 700; /* Bold */
+  animation: fadeInUp 1s ease;
+}
+/* Projeler grid’ine perspektif eklenmiş hali */
+#projects .projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+  perspective: 1000px; /* Kart tilt efektinin 3B algısını sağlar */
+}
+
+/* Kartlar: 3D dönüşecek şekilde ayarlandı */
+.project-card {
+  background-color: #ffffff;
+  border: 2px solid rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.project-card:nth-child(1) { animation-delay: 0.2s; }
+.project-card:nth-child(2) { animation-delay: 0.4s; }
+.project-card:nth-child(3) { animation-delay: 0.6s; }
+.project-card:nth-child(4) { animation-delay: 0.8s; }
+.project-card:nth-child(5) { animation-delay: 1s; }
+.project-card:nth-child(6) { animation-delay: 1.2s; }
+.project-card:nth-child(7) { animation-delay: 1.4s; }
+.project-card:nth-child(8) { animation-delay: 1.6s; }
+
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.project-card-content {
+  padding: 1.5rem;
+}
+.project-card h3 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: var(--dark-text);
+}
+.project-card p {
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.project-card a {
+  font-weight: 500;
+  color: var(--accent-color);
+  transition: color 0.2s;
+}
+.project-card a:hover {
+  color: var(--secondary-color);
+}
+.card-inner {
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform 0.2s ease;  /* Fare çıkınca yumuşak dönüş */
+}
+
+.project-card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  border-color: var(--accent-color);
+}
+
+
+/* -------------------------------------------------- */
+/* Etiketlerin (tags) Görünümü İçin İyileştirilmiş CSS */
+/* -------------------------------------------------- */
+
+/* 1. Etiketleri tutan kapsayıcı */
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;          /* Satır taşarsa alt satırda devam etsin */
+  gap: 0.5rem;              /* Etiketler arası boşluk */
+  margin-bottom: 0.75rem;   /* Altında açıklama için boşluk */
+}
+
+/* 2. Her bir etiket (project-tag) */
+.project-tag {
+  display: inline-block;
+  background-color: var(--secondary-color);  /* Turkuaza yakın ton */
+  color: #fff;                                /* Metin beyaz */
+  font-size: 0.75rem;                         /* Biraz daha ufak font */
+  padding: 0.3rem 0.8rem;                     /* Dikey ve yatay dolgu */
+  border-radius: 12px;                        /* Yumuşak köşeler */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);   /* Hafif gölge efekti */
+  transition: background-color 0.2s, transform 0.2s; /* Hover geçişi */
+}
+
+/* 3. Hover durumunda */
+.project-tag:hover {
+  background-color: var(--accent-color);     /* Lila/mor tonuna geçiş */
+  transform: translateY(-2px);                /* Hafif yukarı doğru kalkma */
+}
+
+
+
+/* App.css’inize ekleyin: */
+#contact {
+  text-align: center;
+  padding-bottom: 0;    /* Alt taraf boşluğu sıfırla */
+}
+
+/* Fade-in animasyonu */
+@keyframes fadeInUp {
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  section {
+    padding: 2rem 0;
+  }
+  #projects .projects-grid {
+    gap: 1rem;
+  }
+}
+
+
+/* ================================================= */
+/* 4.1. Sertifikalar ve Özgeçmiş Bölümleri İçin CSS  */
+/* ================================================= */
+
+/* Ortak: section başlıkları (Sertifikalar, Özgeçmiş vb.) */
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+  font-weight: 700;
+  text-align: center;
+}
+
+/* -------------------- */
+/* 4.1.1. Sertifikalar */
+
+/* Sertifikalar bölümüne padding */
+.section-certificates {
+  padding: 3rem 0;
+}
+
+/* Sertifikaların listesi */
+.certificate-list {
+  list-style: none;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* Her bir sertifika satırı */
+.certificate-list li {
+  background-color: #ffffff;
+  margin-bottom: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.2s;
+}
+
+/* Sertifika linkinin stili */
+.certificate-list li a {
+  color: var(--secondary-color);   /* Turkuaz ton */
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.certificate-list li a:hover {
+  color: var(--accent-color);       /* Lila ton */
+}
+
+/* -------------------- */
+/* 4.1.2. Özgeçmiş */
+
+/* Özgeçmiş bölümüne padding */
+.section-resume {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+/* Özgeçmiş açıklaması (paragraf) */
+.section-resume p {
+  max-width: 800px;
+  margin: 0 auto 1.5rem auto;
+  line-height: 1.6;
+  color: #555;
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* Özgeçmiş butonu (PDF link) */
+.resume-link {
+  display: inline-block;
+  align-items: center;
+  background-color: var(--secondary-color);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background-color 0.2s, transform 0.2s;
+  text-decoration: none;
+  margin: 0 auto;
+}
+.resume-link:hover {
+  background-color: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+/* ----------------------------------------------------- */
+/* 4.3. Responsive (İsteğe Bağlı)                       */
+/* ----------------------------------------------------- */
+
+@media (max-width: 768px) {
+  .certificate-list li {
+    padding: 0.5rem 0.75rem;
+  }
+  .resume-link {
+    padding: 0.5rem 1rem;
   }
 }
