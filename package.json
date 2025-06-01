@@ -13,7 +13,7 @@
     "react-scripts": "^3.4.4",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://Mertozkaya21.github.io/portfolyo",
+  "homepage": "https://Mertozkaya21.github.io",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
