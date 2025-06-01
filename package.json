@@ -13,7 +13,10 @@
     "react-scripts": "^3.4.4",
     "web-vitals": "^2.1.4"
   },
+  "homepage": "https://Mertozkaya21.github.io/portfolyo",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts --openssl-legacy-provider build",
     "test": "react-scripts test",
