@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Mert Özkaya",
+  "name": "Mert Özkaya - Software Engineer Portfolio",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +20,7 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#007A5A",
+  "background_color": "#FBFAF7",
+  "description": "Software Engineer specializing in Unity Game Development, Machine Learning, and Backend Development"
 }
