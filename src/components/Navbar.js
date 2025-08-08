@@ -1,6 +1,5 @@
 import React from 'react';
 import { Github, Linkedin } from 'lucide-react';
-
 export default function Navbar() {
   return (
     <header className="navbar">
@@ -13,8 +12,6 @@ export default function Navbar() {
             <li><a href="#contact">İletişim</a></li>
           </ul>
         </nav>
-
-        {/* Sosyal İkonlar */}
         <div className="social-icons">
           <a
             href="https://github.com/Mertozkaya21"

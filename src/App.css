@@ -1,14 +1,3 @@
-
-/*
-:root {
-  --primary-color: #275968;
-  --secondary-color:  #102d31; 
-  --accent-color: #0ba1e2;
-  --light-bg: #f0f4f8;
-  --dark-text: #2c3e50;
-  --nav-height: 50px;
-}
-*/
 :root {
   --light-bg: #FBFAF7;
   --dark-text: #2E3A3A;
@@ -51,13 +40,13 @@ body {
 .section-title {
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
-  color: #007A5A;    /* Burayı dilediğin yeşil tonla değiştir */
+  color: #007A5A;   
   font-weight: 700;
   text-align: center;
 }
 
 section {
-  padding: 1rem 0; /* 2rem yerine 1rem yaptık */
+  padding: 1rem 0; 
   position: relative;
 }
 
@@ -114,7 +103,6 @@ a:hover::after {
   z-index: -1;
 }
 
-/* Navbar Genel Stil */
 .navbar {
   position: fixed;
   top: 0;
@@ -179,16 +167,12 @@ a:hover::after {
   color: var(--accent-color);
 }
 
-/* Responsive (Mobilde İkonlar Arasını Azalt) */
 @media (max-width: 768px) {
   .social-icons {
     gap: 0.5rem;
   }
 }
 
-
-
-/* 3. Hero Bölümü */
 .hero {
   display: flex;
   align-items: center;
@@ -290,15 +274,18 @@ a:hover {
   height: 180px;
   object-fit: cover;
 }
+
 .project-card-content {
   padding: 1.5rem;
 }
+
 .project-card h3 {
   font-size: 1.5rem;
   text-align: center;
   margin-bottom: 0.5rem;
   color: var(--dark-text);
 }
+
 .project-card p {
   color: #555;
   margin-bottom: 1rem;
@@ -315,7 +302,7 @@ a:hover {
 .card-inner {
   transform-style: preserve-3d;
   will-change: transform;
-  transition: transform 0.2s ease;  /* Fare çıkınca yumuşak dönüş */
+  transition: transform 0.2s ease;  
 }
 
 .project-card:hover {
@@ -323,12 +310,6 @@ a:hover {
   border-color: var(--accent-color);
 }
 
-
-/* -------------------------------------------------- */
-/* Etiketlerin (tags) Görünümü İçin İyileştirilmiş CSS */
-/* -------------------------------------------------- */
-
-/* 1. Etiketleri tutan kapsayıcı */
 .project-tags {
   display: flex;
   flex-wrap: wrap;          /* Satır taşarsa alt satırda devam etsin */
@@ -336,7 +317,7 @@ a:hover {
   margin-bottom: 0.75rem;   /* Altında açıklama için boşluk */
 }
 
-/* 2. Her bir etiket (project-tag) */
+
 .project-tag {
   display: inline-block;
   background-color: var(--secondary-color);  /* Turkuaza yakın ton */
@@ -348,21 +329,16 @@ a:hover {
   transition: background-color 0.2s, transform 0.2s; /* Hover geçişi */
 }
 
-/* 3. Hover durumunda */
 .project-tag:hover {
   background-color: var(--accent-color);     /* Lila/mor tonuna geçiş */
   transform: translateY(-2px);                /* Hafif yukarı doğru kalkma */
 }
 
-
-
-/* App.css’inize ekleyin: */
 #contact {
   text-align: center;
-  padding-bottom: 0;    /* Alt taraf boşluğu sıfırla */
+  padding-bottom: 0;    
 }
 
-/* Fade-in animasyonu */
 @keyframes fadeInUp {
   to {
     opacity: 1;
@@ -376,7 +352,6 @@ a:hover {
   animation: fadeInUp 1s ease forwards;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
@@ -393,11 +368,6 @@ a:hover {
 }
 
 
-/* ================================================= */
-/* 4.1. Sertifikalar ve Özgeçmiş Bölümleri İçin CSS  */
-/* ================================================= */
-
-/* Ortak: section başlıkları (Sertifikalar, Özgeçmiş vb.) */
 .section-title {
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
@@ -406,15 +376,10 @@ a:hover {
   text-align: center;
 }
 
-/* -------------------- */
-/* 4.1.1. Sertifikalar */
-
-/* Sertifikalar bölümüne padding */
 .section-certificates {
   padding: 3rem 0;
 }
 
-/* Sertifikaların listesi */
 .certificate-list {
   list-style: none;
   max-width: 700px;
@@ -422,7 +387,6 @@ a:hover {
   padding: 0;
 }
 
-/* Her bir sertifika satırı */
 .certificate-list li {
   background-color: #ffffff;
   margin-bottom: 0.75rem;
@@ -432,7 +396,6 @@ a:hover {
   transition: background-color 0.2s;
 }
 
-/* Sertifika linkinin stili */
 .certificate-list li a {
   color: var(--secondary-color);   /* Turkuaz ton */
   font-weight: 500;
@@ -443,16 +406,11 @@ a:hover {
   color: var(--accent-color);       /* Lila ton */
 }
 
-/* -------------------- */
-/* 4.1.2. Özgeçmiş */
-
-/* Özgeçmiş bölümüne padding */
 .section-resume {
   text-align: center;
   padding: 3rem 0;
 }
 
-/* Özgeçmiş açıklaması (paragraf) */
 .section-resume p {
   max-width: 800px;
   margin: 0 auto 1.5rem auto;
@@ -462,7 +420,6 @@ a:hover {
   text-align: center;
 }
 
-/* Özgeçmiş butonu (PDF link) */
 .resume-link {
   display: inline-block;
   align-items: center;
@@ -479,10 +436,6 @@ a:hover {
   background-color: var(--accent-color);
   transform: translateY(-2px);
 }
-
-/* ----------------------------------------------------- */
-/* 4.3. Responsive (İsteğe Bağlı)                       */
-/* ----------------------------------------------------- */
 
 @media (max-width: 768px) {
   .certificate-list li {

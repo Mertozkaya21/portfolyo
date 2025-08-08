@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Versiyon Kontrolleri: Git ve GitHub",
+    "pdfLink": "/certificates/Versiyon_Kontrolleri__Git_ve_GitHub_Sertifika.pdf"
+  },
+    {
+    "title": "Girişimcilik Dersleri Eğitim Sertifikası",
+    "pdfLink": "/certificates/Girişimcilik.pdf"
+  },
+  {
+    "title": "Flutter ile Uygulama Geliştirme",
+    "pdfLink": "/certificates/Flutter.pdf"
+  },
+  {
+    "title": "Ordered Data Structures",
+    "pdfLink": "/certificates/Ordered Data Structures.pdf"
+  },
+  {
+    "title": "AI For Everyone",
+    "pdfLink": "/certificates/AI For Everyone.pdf"
+  },
+  {
+    "title": "Supervised Machine Learning: Regression and Classification",
+    "pdfLink": "/certificates/Advanced Learning Algorithms.pdf"
+  },
+  {
+    "title": "Advanced Learning Algorithms",
+    "pdfLink": "/certificates/Advanced Learning Algorithms.pdf"
+  },
+  {
+    "title": "Neural Networks and Deep Learning",
+    "pdfLink": "/certificates/NN_And_Deep_Learning.pd"
+  },
+  {
+    "title": "Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization",
+    "pdfLink": "/certificates/Improving_NN.pdf"
+  },
+  {
+    "title": "Structuring Machine Learning Projects",
+    "pdfLink": "/certificates/Structuring_ML_Projects.pdf"
+  }
+]

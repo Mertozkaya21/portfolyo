@@ -4,21 +4,20 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
-import Certificates from './components/Certificates';  // Eklendi
-import Resume from './components/Resume';              // Eklendi
+import Certificates from './components/Certificates';  
+import Resume from './components/Resume';       
 
 function App() {
   return (
     <div className="App">
-      {/* Arka plana basit bir canlı gradient animasyonu eklemek için */}
       <div className="animated-bg"></div>
       <Navbar />
       <main>
-        <Hero />
-        <Projects />
-        <Certificates />
-        <Resume />
-        <Contact />
+        <Hero/>
+        <Projects/>
+        <Certificates/>
+        <Resume/>
+        <Contact/>
       </main>
     </div>
   );

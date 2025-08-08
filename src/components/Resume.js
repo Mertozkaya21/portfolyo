@@ -1,6 +1,4 @@
 // src/components/Resume.js
-import React from 'react';
-import resumeData from '../data/resume.json';
 
 export default function Resume() {
   return (
@@ -8,10 +6,10 @@ export default function Resume() {
       <div className="container">
         <h2 className="section-title">Özgeçmiş</h2>
         <p>
-          Aşağıdaki bağlantıya tıklayarak özgeçmişimi PDF formatında indirebilir ya da görüntüleyebilirsiniz.
+          Aşağıdaki bağlantıya tıklayarak özgeçmişimi görüntüleyebilirsiniz.
         </p>
         <a
-          href={resumeData.pdfLink}
+          href={`${process.env.PUBLIC_URL}/CV/Mert_Ozkaya_CV.pdf`}
           target="_blank"
           rel="noopener noreferrer"
           className="resume-link"
