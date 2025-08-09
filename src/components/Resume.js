@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Download, FileText, User, Calendar, MapPin } from 'lucide-react';
+import { Download, FileText, User, MapPin } from 'lucide-react';
 import { useAppContext } from '../context/AppContext';
 import { translations } from '../translations/translations';
 
@@ -79,10 +79,6 @@ export default function Resume() {
                 <h3>{t.hero.name}</h3>
                 <p className="resume-subtitle">{t.resume.subtitle}</p>
                 <div className="resume-details">
-                  <div className="detail-item">
-                    <Calendar size={16} />
-                    <span>{t.resume.experience}</span>
-                  </div>
                   <div className="detail-item">
                     <MapPin size={16} />
                     <span>{t.resume.location}</span>

@@ -82,15 +82,11 @@ export default function Hero() {
               variants={itemVariants}
             >
               <div className="stat">
-                <span className="stat-number">4+</span>
-                <span className="stat-label">{t.hero.stats.experience}</span>
-              </div>
-              <div className="stat">
                 <span className="stat-number">10+</span>
                 <span className="stat-label">{t.hero.stats.projects}</span>
               </div>
               <div className="stat">
-                <span className="stat-number">5+</span>
+                <span className="stat-number">10+</span>
                 <span className="stat-label">{t.hero.stats.technologies}</span>
               </div>
             </motion.div>

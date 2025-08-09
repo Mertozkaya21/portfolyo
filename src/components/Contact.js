@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Mail, MapPin, Send } from 'lucide-react';
+import { Mail, Send } from 'lucide-react';
 import { useAppContext } from '../context/AppContext';
 import { translations } from '../translations/translations';
 
@@ -48,12 +48,6 @@ export default function Contact() {
       label: t.contact.email,
       value: "mertozkaya2k1@gmail.com",
       link: "mailto:mertozkaya2k1@gmail.com"
-    },
-    {
-      icon: MapPin,
-      label: t.contact.location,
-      value: t.contact.locationValue,
-      link: null
     }
   ];
 
@@ -131,21 +125,6 @@ export default function Contact() {
                 </motion.div>
               ))}
             </div>
-
-            <motion.div 
-              className="contact-actions"
-              variants={itemVariants}
-            >
-              <motion.a
-                href="mailto:mertozkaya2k1@gmail.com"
-                className="contact-button primary"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Mail size={20} />
-                <span>{t.contact.sendEmail}</span>
-              </motion.a>
-            </motion.div>
 
             <div className="contact-bg"></div>
           </motion.div>

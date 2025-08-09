@@ -87,7 +87,6 @@ export const translations = {
       name: "Mert Özkaya",
       subtitle: "I'm a fourth-year Computer Engineering student at Bilkent University. I focus on software development, especially Unity game design and artificial intelligence applications, and I'm working to improve myself in these areas.",
       stats: {
-        experience: "Years Experience",
         projects: "Projects",
         technologies: "Technologies"
       },
@@ -124,7 +123,6 @@ export const translations = {
     resume: {
       title: "Resume",
       subtitle: "Software Engineer",
-      experience: "4+ Years Experience",
       location: "Ankara, Turkey",
       description: "I'm a fourth-year Computer Engineering student at Bilkent University. I focus on software development, especially Unity game design and artificial intelligence applications. I have experience in backend development, Unity game development, and machine learning.",
       actions: {
