@@ -15,7 +15,7 @@ const projectList = [
     descriptionEn: 'I worked as a backend developer in the Bilconnect project. I implemented user management, data storage, and authentication systems using Firebase and Java.',
     repoLink: 'https://github.com/Mertozkaya21/Bilconnect',
     tags: ["Backend" ,"Firebase","Java"],
-    icon: "🔥"
+    icon: "🗄️"
   },
   {
     id: 2,
@@ -35,7 +35,7 @@ const projectList = [
     descriptionEn: 'I implemented the UART communication protocol on the Basys3 FPGA card. I connected two Basys3 cards with a cable to enable data transmission between them.',
     repoLink: 'https://github.com/Mertozkaya21/UART-protocol',
     tags: ["Embedded Software" ,"Basys3", "UART"],
-    icon: "⚡"
+    icon: "💻"
   },
   {
     id: 4,
@@ -54,7 +54,7 @@ const projectList = [
     description: 'Farklı CNN mimarileriyle Transfer Learning kullanarak yaş tahmini modeli geliştirdim. UTKFace veri seti üzerinde eğitim yaptım ve performans analizini gerçekleştirdim. Transfer Learning kullanarak farklı CNN mimarilerini kıyasladım.',
     descriptionEn: 'I developed an age estimation model using Transfer Learning with different CNN architectures. I trained on the UTKFace dataset and performed performance analysis. I compared different CNN architectures using Transfer Learning.',
     tags: ["CNN" , "ResNet", "Transfer Learning"],
-    icon: "🤖"
+    icon: "📊"
   },
   {
     id: 6,

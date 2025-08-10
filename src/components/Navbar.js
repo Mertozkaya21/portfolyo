@@ -71,9 +71,9 @@ export default function Navbar() {
           className="navbar-brand"
           whileHover={{ scale: 1.05 }}
         >
-          <a href="#hero" className="logo">
-            <span className="logo-text">MÖ</span>
-          </a>
+        <a href="#hero" className="logo">
+          <img src={`${process.env.PUBLIC_URL}/favicon.svg`} alt="Logo" className="logo-img" />
+        </a>
         </motion.div>
 
         <nav className="nav-desktop">
