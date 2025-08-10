@@ -1,42 +1,42 @@
 [
   {
     "title": "Versiyon Kontrolleri: Git ve GitHub",
-    "pdfLink": "/public/certificates/Versiyon_Kontrolleri__Git_ve_GitHub_Sertifika.pdf"
+    "pdfLink": "/certificates/Versiyon_Kontrolleri__Git_ve_GitHub_Sertifika.pdf"
   },
     {
     "title": "Girişimcilik Dersleri Eğitim Sertifikası",
-    "pdfLink": "/public/certificates/Girişimcilik.pdf"
+    "pdfLink": "/certificates/Girişimcilik.pdf"
   },
   {
     "title": "Flutter ile Uygulama Geliştirme",
-    "pdfLink": "/public/certificates/Flutter.pdf"
+    "pdfLink": "/certificates/Flutter.pdf"
   },
   {
     "title": "Ordered Data Structures",
-    "pdfLink": "/public/certificates/Ordered Data Structures.pdf"
+    "pdfLink": "/certificates/Ordered Data Structures.pdf"
   },
   {
     "title": "AI For Everyone",
-    "pdfLink": "/public/certificates/AI For Everyone.pdf"
+    "pdfLink": "/certificates/AI For Everyone.pdf"
   },
   {
     "title": "Supervised Machine Learning: Regression and Classification",
-    "pdfLink": "/public/certificates/Advanced Learning Algorithms.pdf"
+    "pdfLink": "/certificates/Advanced Learning Algorithms.pdf"
   },
   {
     "title": "Advanced Learning Algorithms",
-    "pdfLink": "/public/certificates/Advanced Learning Algorithms.pdf"
+    "pdfLink": "/certificates/Advanced Learning Algorithms.pdf"
   },
 {
     "title": "Neural Networks and Deep Learning",
-    "pdfLink": "/public/certificates/NN_And_Deep_Learning.pdf"
+    "pdfLink": "/certificates/NN_And_Deep_Learning.pdf"
   },
   {
     "title": "Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization",
-    "pdfLink": "/public/certificates/Improving_NN.pdf"
+    "pdfLink": "/certificates/Improving_NN.pdf"
   },
   {
     "title": "Structuring Machine Learning Projects",
-    "pdfLink": "/public/certificates/Structuring_ML_Projects.pdf"
+    "pdfLink": "/certificates/Structuring_ML_Projects.pdf"
   }
 ]
